@@ -1,11 +1,10 @@
-import os
+
 import csv
 
-#PyBank_csvpath = os.path.join("..", "Resources", "budget_data")
 
 with open('budget_data.csv', 'r') as csvfile:
     reader = csv.reader(csvfile)
-    next(reader)  # Skip header row
+    next(reader) 
 
     months = []
     profits = []
