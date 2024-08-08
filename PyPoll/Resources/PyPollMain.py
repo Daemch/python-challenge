@@ -1,18 +1,18 @@
 
 import csv
 
-# Initialize variables
+# Create variables
 total_votes = 0
-candidate_votes = {}  # Dictionary to store candidate votes
+candidate_votes = {}  
 
-# Read the CSV file and process data
+# Read the CSV file 
 with open('election_data.csv', 'r') as csvfile:
     reader = csv.reader(csvfile)
-    next(reader)  # Skip header row
+    next(reader)
 
     for row in reader:
-        candidate = row[2]  # Candidate column (index 2)
-        votes = int(row[0])  # Voter ID column (index 0)
+        candidate = row[2]  
+        votes = int(row[0])  
 
         # Update total votes
         total_votes += votes

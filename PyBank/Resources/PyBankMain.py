@@ -1,11 +1,11 @@
 
 import csv
 
-
+# Read CSV
 with open('budget_data.csv', 'r') as csvfile:
     reader = csv.reader(csvfile)
     next(reader) 
-
+# Create list to hold variables
     months = []
     profits = []
     monthly_changes = []
@@ -26,6 +26,8 @@ with open('budget_data.csv', 'r') as csvfile:
 
     increase_date = months[monthly_changes.index(greatest_increase) + 1]
     decrease_date = months[monthly_changes.index(greatest_decrease) + 1]
+
+# Print to terminal
 
     print("Financial Analysis")
     print("-------------------------")
